@@ -1,0 +1,131 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", helvetica, sans-serif;
+}
+
+.accordion {
+    padding: 25px;
+    width: 100%;
+    /**Ocupa 100% do tamanho da div**/
+    background-color: lightgray;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: #262626;
+    transition: 0.2s;
+    text-align: left;
+    font-size: 16.5px;
+}
+
+.active,
+.accordion:hover {
+    background-color: grey;
+}
+
+.panel {
+    padding: 0;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    /** "esconde" o conteudo inicialmente**/
+    transition: max-height 0.2s ease-out;
+    /**Transição**/
+}
+
+.menu {
+    /**tamanho da div menu**/
+    width: 100%;
+    grid-area: a;
+    background-color: #262626;
+    height: 100%;
+}
+
+.accordion:after {
+    content: "\2228";
+    font-size: 15px;
+    font-style: bold;
+    float: right;
+}
+
+.active:after {
+    /** Adiciona o ícone /\ após abrir**/
+    content: "\2227";
+    font-size: 15px;
+    font-style: bold;
+    float: right;
+}
+
+
+/**Estilização da lista**/
+
+ul {
+    padding: 0px;
+    margin: 0px;
+    width: inherit;
+    /**herda o tamanho do accordion que a contém**/
+}
+
+.list a {
+    display: block;
+    padding: 5px;
+    background-color: #262626;
+    list-style-type: none;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Arial", helvetica, sans-serif;
+    font-size: 16.5px;
+    transition: 0.4s;
+    color: rgb(99, 105, 105);
+}
+
+.landpage:hover {
+    background-color: gray;
+    color: #262626;
+}
+
+li a:active {
+    color: rgb(99, 105, 105);
+}
+
+li a:visited {
+    color: rgb(99, 105, 105);
+}
+
+
+/** Estilização do Header **/
+
+.header {
+    padding: 10px 16px;
+    background: #262626;
+    color: #f1f1f1;
+    grid-area: h;
+    text-align: center;
+}
+
+.content {
+    padding: 16px;
+    grid-area: m;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 102px;
+}
+
+
+/* Container */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 10vh 90vh;
+    grid-template-areas: "h h" "a m";
+}
