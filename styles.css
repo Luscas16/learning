@@ -52,17 +52,17 @@ body {
 
 .accordion:after {
     /** Adiciona o ícone \/ após fechar**/
-    content: "\2228";
-    font-size: 15px;
-    font-style: bold;
+    font-family: "Font Awesome 5 Free";
+    content: "\f078";
+    font-weight: bold;
     float: right;
 }
 
 .active:after {
     /** Adiciona o ícone /\ após abrir**/
-    content: "\2227";
-    font-size: 15px;
-    font-style: bold;
+    font-family: "Font Awesome 5 Free";
+    content: "\f077";
+    font-weight: bold;
     float: right;
 }
 
