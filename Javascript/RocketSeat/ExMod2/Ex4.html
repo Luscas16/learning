@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Curso Javascript</title>
+    </head>
+    <body>
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
+        <ul></ul>
+    </body>
+
+    <script>
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        var listElement = document.querySelector('ul');
+        var inputElement = document.querySelector('input');
+
+        function adicionar(){
+            var liElement = document.createElement('li'); //cria novo li
+            var textElement = document.createTextNode(inputElement.value); //pega o valor do campo input e armazena em textElement
+
+            liElement.appendChild(textElement); //adiciona o texto a um elemento li
+            listElement.appendChild(liElement); //adiciona o li à lista ul
+            inputElement.value = ""; //limpa o campo
+        }
+
+        for (nome of nomes) { //adiciona o vetor à lista
+            var liElement = document.createElement('li');
+            var textElement = document.createTextNode(nome);
+            liElement.appendChild(textElement);
+            listElement.appendChild(liElement);
+        }
+            
+    </script>
+</html>
