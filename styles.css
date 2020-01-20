@@ -199,3 +199,7 @@ input[type="password"] {
     border: 1px solid #808080;
     border-radius: 3px;
 }
+
+#btnLogin {
+    color: blue;
+}
