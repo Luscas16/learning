@@ -114,6 +114,7 @@ li a:visited {
     color: #808080;
     grid-area: h;
     text-align: center;
+    height: auto;
     width: 100%;
 }
 
@@ -124,7 +125,6 @@ li a:visited {
 }
 
 .header ul {
-    width: 100%;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -176,16 +176,6 @@ li a:visited {
 }
 
 
-/** Estilização do content**/
-
-.content {
-    padding: 16px;
-    grid-area: m;
-    background-color: #bfbfbf;
-    overflow: auto;
-}
-
-
 /**Inputs**/
 
 .div-input {
@@ -205,4 +195,14 @@ input[type="password"] {
 
 #btnLogin {
     color: #262626;
+}
+
+
+/**Estilização content**/
+
+.content {
+    padding: 16px;
+    grid-area: m;
+    background-color: #bfbfbf;
+    overflow: auto;
 }
