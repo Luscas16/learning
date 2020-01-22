@@ -1,208 +1,197 @@
-html,
-body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Arial", helvetica, sans-serif;
-    text-decoration: none;
-    overflow-x: hidden;
-    /*desabilita scroll horizontal*/
-}
-
-
-/**Estilização do accordion menu**/
-
-.accordion {
-    padding: 25px;
-    width: 100%;
-    /**Ocupa 100% do tamanho da div**/
-    background-color: lightgray;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    color: #262626;
-    transition: 0.2s;
-    text-align: left;
-    font-size: 16.5px;
-}
-
-.active,
-.accordion:hover {
-    background-color: grey;
-}
-
-.panel {
-    padding: 0;
-    background-color: inherit;
-    color: #808080;
-    max-height: 0;
-    overflow: hidden;
-    /** "esconde" o conteudo inicialmente**/
-    transition: max-height 0.2s ease-out;
-    /**Transição**/
-}
-
-.menu {
-    /**tamanho da div menu**/
-    width: 100%;
-    grid-area: a;
-    background-color: #262626;
-    height: 100%;
-}
-
-.accordion:after {
-    /** Adiciona o ícone \/ após fechar**/
-    font-family: "Font Awesome 5 Free";
-    content: "\f078";
-    font-weight: bold;
-    float: right;
-}
-
-.active:after {
-    /** Adiciona o ícone /\ após abrir**/
-    font-family: "Font Awesome 5 Free";
-    content: "\f077";
-    font-weight: bold;
-    float: right;
-}
-
-
-/**Estilização da lista**/
-
-.list {
-    padding: 0px;
-    margin: 0px;
-    list-style-type: none;
-    width: inherit;
-    /**herda o tamanho do accordion que a contém**/
-}
-
-.list a {
-    display: block;
-    padding: 5px;
-    background-color: #262626;
-    list-style-type: none;
-    text-decoration: none;
-    text-align: center;
-    font-family: "Arial", helvetica, sans-serif;
-    font-size: 16.5px;
-    transition: 0.4s;
-    /*color: rgb(99, 105, 105);*/
-    color: #808080;
-}
-
-.landpage:hover {
-    background-color: gray;
-    color: #262626;
-}
-
-li a:active {
-    color: #808080;
-}
-
-li a:visited {
-    color: #808080;
-}
-
-
-/** Estilização do Header **/
-
-.header {
-    padding: 10px 16px;
-    background: #262626;
-    color: #808080;
-    grid-area: h;
-    text-align: center;
-    height: auto;
-    width: 100%;
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    position: center;
-}
-
-.header li {
-    display: inline-block;
-    text-align: center;
-    padding: 10px 20px 35px;
-}
-
-.header li a {
-    font-family: "Arial", helvetica, sans-serif;
-    color: #808080;
-    padding: inherit;
-    text-decoration: none;
-}
-
-.landpage-header:hover {
-    background-color: lightgray;
-    color: #262626;
-    transition: 0.4s;
-}
-
-
-/* Container */
-
-.container {
-    display: grid;
-    grid-template-columns: 0.6fr 3.4fr;
-    grid-template-rows: 10vh 120vh;
-    grid-template-areas: "h h" "a m" "f f";
-}
-
-
-/**Estilização do footer**/
-
-.footer {
-    padding: 10px 16px;
-    background: #262626;
-    color: #808080;
-    grid-area: f;
-    text-align: center;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
-
-/**Inputs**/
-
-.div-input {
-    width: 120px;
-    height: auto;
-    display: block;
-}
-
-.content input[type="text"],
-input[type="password"] {
-    width: 100%;
-    display: block;
-    margin-bottom: 5px;
-    border: 1px solid #808080;
-    border-radius: 3px;
-}
-
-#btnLogin {
-    color: #262626;
-}
-
-
-/**Estilização content**/
-
-.content {
-    padding: 16px;
-    grid-area: m;
-    background-color: #bfbfbf;
-    overflow: auto;
-}
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", helvetica, sans-serif;
+        text-decoration: none;
+        overflow-x: hidden;
+        /*desabilita scroll horizontal*/
+    }
+    /**Estilização do accordion menu**/
+    
+    .accordion {
+        padding: 25px;
+        width: 100%;
+        /**Ocupa 100% do tamanho da div**/
+        background-color: lightgray;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        color: #262626;
+        transition: 0.2s;
+        text-align: left;
+        font-size: 16.5px;
+    }
+    
+    .active,
+    .accordion:hover {
+        background-color: grey;
+    }
+    
+    .panel {
+        padding: 0;
+        background-color: inherit;
+        color: #808080;
+        max-height: 0;
+        overflow: hidden;
+        /** "esconde" o conteudo inicialmente**/
+        transition: max-height 0.2s ease-out;
+        /**Transição**/
+    }
+    
+    .menu {
+        /**tamanho da div menu**/
+        width: 100%;
+        grid-area: a;
+        background-color: #262626;
+        height: 100%;
+    }
+    
+    .accordion:after {
+        /** Adiciona o ícone \/ após fechar**/
+        font-family: "Font Awesome 5 Free";
+        content: "\f078";
+        font-weight: bold;
+        float: right;
+    }
+    
+    .active:after {
+        /** Adiciona o ícone /\ após abrir**/
+        font-family: "Font Awesome 5 Free";
+        content: "\f077";
+        font-weight: bold;
+        float: right;
+    }
+    /**Estilização da lista**/
+    
+    .list {
+        padding: 0px;
+        margin: 0px;
+        list-style-type: none;
+        width: inherit;
+        /**herda o tamanho do accordion que a contém**/
+    }
+    
+    .list a {
+        display: block;
+        padding: 5px;
+        background-color: #262626;
+        list-style-type: none;
+        text-decoration: none;
+        text-align: center;
+        font-family: "Arial", helvetica, sans-serif;
+        font-size: 16.5px;
+        transition: 0.4s;
+        /*color: rgb(99, 105, 105);*/
+        color: #808080;
+    }
+    
+    .landpage:hover {
+        background-color: gray;
+        color: #262626;
+    }
+    
+    li a:active {
+        color: #808080;
+    }
+    
+    li a:visited {
+        color: #808080;
+    }
+    /** Estilização do Header **/
+    
+    .header {
+        padding: 10px 15px;
+        top: 0px;
+        left: 0px;
+        background: #262626;
+        color: #808080;
+        grid-area: h;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+    }
+    
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    
+    .header ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: center;
+    }
+    
+    .header li {
+        display: inline-block;
+        text-align: center;
+        padding: 10px 20px 35px;
+    }
+    
+    .header li a {
+        font-family: "Arial", helvetica, sans-serif;
+        color: #808080;
+        padding: inherit;
+        text-decoration: none;
+    }
+    
+    .landpage-header:hover {
+        background-color: lightgray;
+        color: #262626;
+        transition: 0.4s;
+    }
+    /* Container */
+    
+    .container {
+        display: grid;
+        grid-template-columns: 0.6fr 3.4fr;
+        grid-template-rows: 10vh 120vh;
+        grid-template-areas: "h h" "a m" "f f";
+    }
+    /**Estilização do footer**/
+    
+    .footer {
+        padding: 10px 16px;
+        background: #262626;
+        color: #808080;
+        grid-area: f;
+        text-align: center;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    /**Inputs**/
+    
+    .div-input {
+        width: 120px;
+        height: auto;
+        display: block;
+    }
+    
+    .content input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        display: block;
+        margin-bottom: 5px;
+        border: 1px solid #808080;
+        border-radius: 3px;
+    }
+    
+    #btnLogin {
+        color: #262626;
+    }
+    /**Estilização content**/
+    
+    .content {
+        padding: 16px;
+        grid-area: m;
+        background-color: #bfbfbf;
+        overflow: auto;
+    }
