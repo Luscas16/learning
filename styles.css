@@ -133,6 +133,7 @@ li a:visited {
 
 .header ul {
     width: 100%;
+    heigth: 50%;
     list-style-type: none;
     margin: 0;
     padding: 0;
