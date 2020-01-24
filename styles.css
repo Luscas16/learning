@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Arial", helvetica, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
 }
 
 .container {
@@ -28,6 +28,7 @@ header ul {
     list-style-type: none;
     margin: 15px 0 0 0;
     padding: 0;
+    height: 100%;
     width: 100%;
 }
 
@@ -149,6 +150,7 @@ li a:visited {
     padding: 15px;
     grid-area: m;
     background-color: #bfbfbf;
+    height: 100%;
 }
 
 
