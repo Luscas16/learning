@@ -19,10 +19,11 @@ body {
 
 header {
     background: #efefefee;
+    display: flex;
     color: #18818d;
     grid-area: h;
     height: 100%;
-    text-align: center;
+    box-shadow: 10px 10px 8px red;
 }
 
 header ul {
@@ -31,6 +32,9 @@ header ul {
     padding: 0;
     overflow: hidden;
     color: #18818d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header li {
@@ -56,6 +60,8 @@ header li a {
 #btn-toggleNav {
     outline-style: none;
     float: right;
+    flex: 1;
+    justify-content: flex-end;
 }
 
 
@@ -63,6 +69,7 @@ header li a {
 
 aside {
     grid-area: m;
+    box-shadow: 0 15px 0 0 grey;
 }
 
 .accordion {
@@ -148,7 +155,7 @@ li a:active {
 .content {
     padding: 15px;
     grid-area: m;
-    background-color: #3d3c3c;
+    background-color: white;
     height: 100%;
     color: #efefefee
 }
