@@ -21,29 +21,29 @@ header {
     background: #efefefee;
     color: #18818d;
     grid-area: h;
-    text-align: center;
     height: 100%;
+    text-align: center;
 }
 
 header ul {
     list-style-type: none;
-    margin: 15px 0 0 0;
+    margin: 0;
     padding: 0;
-    height: 100%;
-    width: 100%;
+    overflow: hidden;
     color: #18818d;
 }
 
 header li {
     display: inline-block;
-    text-align: center;
-    padding: 10px 15px 35px;
     color: #18818d;
 }
 
 header li a {
+    display: block;
+    padding: 25px;
+    margin: auto;
+    text-align: center;
     color: #18818d;
-    padding: inherit;
     text-decoration: none;
 }
 
