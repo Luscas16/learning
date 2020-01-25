@@ -4,6 +4,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', Arial, sans-serif;
+    font-size: 22px;
 }
 
 .container {
@@ -17,8 +18,8 @@ body {
 /*Estilização do header*/
 
 header {
-    background: #262626;
-    color: #808080;
+    background: #efefefee;
+    color: #18818d;
     grid-area: h;
     text-align: center;
     height: 100%;
@@ -30,24 +31,25 @@ header ul {
     padding: 0;
     height: 100%;
     width: 100%;
+    color: #18818d;
 }
 
 header li {
     display: inline-block;
     text-align: center;
     padding: 10px 15px 35px;
+    color: #18818d;
 }
 
 header li a {
-    font-family: "Arial", helvetica, sans-serif;
-    color: #808080;
+    color: #18818d;
     padding: inherit;
     text-decoration: none;
 }
 
 .landpage-header:hover {
     background-color: lightgray;
-    color: #262626;
+    color: #18818d;
     transition: 0.4s;
 }
 
@@ -67,11 +69,11 @@ aside {
     padding: 25px 25px 25px 15px;
     width: 100%;
     /* Ocupa 100% do tamanho da div */
-    background-color: lightgray;
+    background-color: #efefefee;
     border: none;
     cursor: pointer;
     outline: none;
-    color: #262626;
+    color: #18818d;
     transition: 0.2s;
     text-align: left;
     font-size: 16.5px;
@@ -79,7 +81,7 @@ aside {
 
 .active,
 .accordion:hover {
-    background-color: grey;
+    background-color: lightgray;
 }
 
 
@@ -96,7 +98,7 @@ aside {
 .list a {
     display: block;
     padding: 5px;
-    background-color: #262626;
+    background-color: #efefefee;
     list-style-type: none;
     text-decoration: none;
     text-align: center;
@@ -107,15 +109,11 @@ aside {
 }
 
 .landpage:hover {
-    background-color: gray;
-    color: #262626;
+    background-color: lightgray;
+    color: #18818d;
 }
 
 li a:active {
-    color: #808080;
-}
-
-li a:visited {
     color: #808080;
 }
 
@@ -152,8 +150,9 @@ li a:visited {
 .content {
     padding: 15px;
     grid-area: m;
-    background-color: #bfbfbf;
+    background-color: #3d3c3c;
     height: 100%;
+    color: #efefefee
 }
 
 
@@ -177,15 +176,15 @@ input[type="email"] {
 
 #btnRegister {
     margin-top: 5px;
-    color: #262626;
+    color: #18818d;
 }
 
 
 /*Estilização do footer*/
 
 footer {
-    background: #262626;
-    color: #808080;
+    background-color: #efefefee;
+    color: #18818d;
     text-align: center;
     height: 100%;
     grid-area: f;
