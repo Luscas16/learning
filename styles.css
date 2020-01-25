@@ -101,7 +101,6 @@ aside {
     color: #18818d;
     transition: 0.2s;
     text-align: left;
-    border-bottom-style: solid;
 }
 
 .active,
@@ -126,7 +125,7 @@ aside {
 
 .list a {
     display: block;
-    padding: 10px;
+    padding: 5px;
     background-color: #efefefee;
     list-style-type: none;
     text-decoration: none;
