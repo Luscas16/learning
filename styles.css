@@ -5,6 +5,8 @@ body {
     box-sizing: border-box;
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 22px;
+    height: 100%;
+    width: 100%;
 }
 
 .container {
@@ -185,6 +187,7 @@ li a:active {
     max-width: 1000px;
     position: relative;
     margin: auto;
+    margin-top: 30px;
 }
 
 
@@ -354,14 +357,14 @@ footer {
     background-color: #18818d;
     color: #efefefee;
     text-align: center;
-    height: 100%;
+    height: 500px;
     grid-area: f;
     display: flex;
+    bottom: 0;
 }
 
 footer .footer-content {
     height: 80%;
-    margin-top: 0;
     display: flex;
     background-color: #18818d;
     font-size: 16px;
@@ -376,7 +379,10 @@ footer .footer-copyright {
     background-color: #146770;
     justify-content: center;
     align-content: center;
-    padding: 15px;
+    padding: 40px;
+    bottom: 0;
+    width: 100%;
+    align-self: bottom;
 }
 
 footer .left-column {
@@ -385,6 +391,7 @@ footer .left-column {
     float: left;
     margin: 10px 40px;
     text-align: justify;
+    max-height: 200px;
 }
 
 footer .right-column {
