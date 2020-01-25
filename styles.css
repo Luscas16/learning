@@ -23,7 +23,10 @@ header {
     color: #18818d;
     grid-area: h;
     height: 100%;
-    box-shadow: 10px 10px 8px red;
+    box-shadow: 0px 5px 5px #27272780;
+    -webkit-box-shadow: 0px 2px 5px #27272780;
+    -moz-box-shadow: 0px 5px 5px #27272780;
+    z-index: 4;
 }
 
 header ul {
@@ -58,10 +61,20 @@ header li a {
 }
 
 #btn-toggleNav {
+    margin: 10px;
     outline-style: none;
+    font-size: 32px;
+    color: #18818d;
+    border: none;
     float: right;
     flex: 1;
     justify-content: flex-end;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+#btn-toggleNav:active {
+    color: #808080;
 }
 
 
@@ -70,6 +83,7 @@ header li a {
 aside {
     grid-area: m;
     box-shadow: 0 15px 0 0 grey;
+    z-index: 5;
 }
 
 .accordion {
@@ -188,8 +202,8 @@ input[type="email"] {
 /*Estilização do footer*/
 
 footer {
-    background-color: #efefefee;
-    color: #18818d;
+    background-color: #312e47;
+    color: #efefefee;
     text-align: center;
     height: 100%;
     grid-area: f;
