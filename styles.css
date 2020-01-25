@@ -10,7 +10,7 @@ body {
     display: grid;
     grid-template-columns: 0.5fr 3.5fr;
     grid-template-rows: 10vh 80vh 10vh;
-    grid-template-areas: "h h" "as m" "f f";
+    grid-template-areas: "h h" "m m" "f f";
 }
 
 
@@ -51,13 +51,16 @@ header li a {
     transition: 0.4s;
 }
 
+#btn-toggleNav {
+    outline-style: none;
+    float: right;
+}
 
-/*Estilização do accordion/menu*/
+
+/*Estilização do side-nav*/
 
 aside {
-    background: #262626;
-    grid-area: as;
-    height: 100%;
+    grid-area: m;
 }
 
 .accordion {

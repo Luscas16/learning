@@ -7,22 +7,31 @@
     <title>Teste</title>
     <link rel="stylesheet" href="./styles.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 
 <body>
     <div class="container">
+
+        <!--Header-->
         <header>
+            <button class="w3-button w3-xxlarge" id="btn-toggleNav" onclick="toggle_nav()">&#9776;</button>
             <ul>
                 <li><a href="./index.html" class="landpage-header">Home</a></li>
                 <li><a href="#sobre" class="landpage-header">Sobre</a></li>
                 <li><a href="#contato" class="landpage-header">Contato</a></li>
             </ul>
         </header>
+
+        <!--Conteúdo-->
         <main class="content">
             <h2>Teste</h2>
         </main>
-        <aside>
+
+        <!--SideNav-->
+        <aside class="w3-sidebar w3-bar-block w3-animate-left" style="display:none; z-index:5; background-color:#262626" id="side-nav">
+            <!--Seção 1-->
             <button class="accordion">Conteúdo</button>
             <div class="panel">
                 <ul class="list">
@@ -51,6 +60,8 @@
                 </p>
             </div>
         </aside>
+
+        <!--Footer-->
         <footer>
             <h4>testando :)</h4>
         </footer>
@@ -59,6 +70,15 @@
 </body>
 
 <script>
+    //Script para abrir e fechar o sidenav com o mesmo botão
+    function toggle_nav() {
+        if (document.getElementById("side-nav").style.display === "none") {
+            document.getElementById("side-nav").style.display = "block";
+        } else {
+            document.getElementById("side-nav").style.display = "none";
+        }
+    }
+
     //Script da animação do accordion
     var acc = document.getElementsByClassName("accordion");
     var i;
