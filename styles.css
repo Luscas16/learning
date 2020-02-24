@@ -137,6 +137,9 @@ body {
 
 .sec3-content {
     font-size: auto;
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
 @media (max-width:991px) {
