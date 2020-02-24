@@ -138,19 +138,11 @@ body {
 
 .sec3-content {
     font-size: auto;
-    display: block;
-    overflow: hidden;
-    margin: 0 auto;
 }
 
 @media (max-width:991px) {
     .sec3 {
         height: 1100px;
-        -moz-hyphens: auto;
-        -ms-hyphens: auto;
-        -webkit-hyphens: auto;
-        hyphens: auto;
-        word-wrap: break-word;
     }
     .sec3-content {
         font-size: 20px;
