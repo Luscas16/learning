@@ -136,13 +136,12 @@ body {
 }
 
 .sec3-content {
-    height: 200px;
     font-size: auto;
 }
 
 @media (max-width:991px) {
     .sec3 {
-        height: 1000px;
+        height: 1100px;
     }
     .sec3-content {
         font-size: 20px;
