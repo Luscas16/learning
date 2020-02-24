@@ -118,9 +118,10 @@ body {
     z-index: 1;
     text-align: center;
     font-size: 22px;
-    height: 500px;
+    height: 400px;
     color: white;
     padding: 40px;
+    padding-top: 60px;
 }
 
 .sec3:before {
