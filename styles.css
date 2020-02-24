@@ -22,15 +22,26 @@ body {
 @media (max-width: 991px) {
     .navbar-custom .navbar-brand {
         margin-top: 9px;
+        margin-bottom: 9px;
         margin-left: 18px;
     }
     .navbar-custom .navbar-nav {
         margin-top: 25px;
     }
+    .navbar {
+        max-height: 60px;
+        justify-content: center;
+        align-content: center;
+    }
 }
 
 
 /* Customizes NavBar/Header */
+
+
+/*.navbar {
+    max-height: 62px;
+}*/
 
 .navbar-custom .navbar-nav .nav-link {
     color: #00695c;
