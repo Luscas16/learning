@@ -1,194 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Teste Bootstrap</title>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="container">
-        <!--Header-->
-        <header>
-            <button class="btn" id="btn-toggleNav" onclick="toggle_nav()"><span class="dark-blue-text"><i
-                class="fas fa-bars fa-1x"></i></span></button>
-            <ul>
-                <li><a href="./index.html" class="landpage-header">Home</a></li>
-                <li><a href="#sobre" class="landpage-header">Sobre</a></li>
-                <li><a href="#contato" class="landpage-header">Contato</a></li>
-            </ul>
-        </header>
-
-        <!--Conteúdo-->
-        <main class="content">
-            <div class="slideshow-container">
-
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-                    <div class="numbertext">1 / 3</div>
-                    <img src="./img/img1.jpg" style="width:100%; max-height: 500px">
-                    <div class="text"></div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">2 / 3</div>
-                    <img src="./img/img2.jpg" style="width:100%; max-height: 500px">
-                    <div class="text"></div>
-                </div>
-
-                <div class="mySlides fade">
-                    <div class="numbertext">3 / 3</div>
-                    <img src="./img/img3.jpg" style="width:100%; max-height: 500px">
-                    <div class="text"></div>
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <header class="header-container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-custom navbar-light navbar-expand-lg fixed-top shadow-sm p-3 mb-5 py-md-2">
+                    <div class="container">
+                        <a class="navbar-brand" href="#"><img src="./img/logo.png" class="responsive-img" alt="Logo" style="width: 70px; height: 45px"></img>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="fa fa-bars"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-item nav-link" href="#">Sobre</a>
+                                <a class="nav-item nav-link" href="#">Contato</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
             </div>
-            <br>
+        </div>
+    </header>
 
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-        </main>
-
-        <!--SideNav-->
-        <aside class="w3-sidebar w3-bar-block w3-animate-left" style="display:none; z-index:5; background-color:#efefefee; box-shadow: 0px 10px 8px grey" id="side-nav">
-            <!--Seção 1-->
-            <button class="accordion">Conteúdo</button>
-            <div class="panel">
-                <ul class="list">
-                    <li><a href="./index.html" class="landpage">Início</a></li>
-                    <li><a href="#landpage" class="landpage">Novidades</a></li>
-                    <li><a href="#landpage" class="landpage">Artigos</a></li>
-                    <li><a href="#landpage" class="landpage">Biblioteca</a></li>
-                    <li><a href="#landpage" class="landpage">Utilidades</a></li>
-                </ul>
-            </div>
-            <!--Seção 2-->
-            <button class="accordion">Conta</button>
-            <div class="panel">
-                <ul class="list">
-                    <li><a href="#landpage" class="landpage">Minha conta</a></li>
-                    <li><a href="./cadastro.html" class="landpage">Cadastrar</a></li>
-                </ul>
-            </div>
-
-            <!--Seção 3
-            <button class="accordion">Seção 3</button>
-            <div class="panel">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-            </div>-->
-        </aside>
-
-        <!--Footer-->
-        <footer class="footer-container">
-            <div class="footer-content">
-                <div class="left-column">
-                    <h2><strong>Lorem ipsum dolor</strong></h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ullam voluptatem praesentium possimus libero blanditiis, consectetur magnam fugiat numquam ipsam amet? Tempore aperiam aliquam maxime culpa necessitatibus numquam fugiat dignissimos?
-                    </p>
-                </div>
-                <div class="right-column">
-                    <h2><strong>Lorem ipsum dolor</strong></h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ullam voluptatem praesentium possimus libero blanditiis, consectetur magnam fugiat numquam ipsam amet? Tempore aperiam aliquam maxime culpa necessitatibus numquam fugiat dignissimos?
-                    </p>
+    <main class="content-container">
+        <div class="sec1">
+            <div class="row">
+                <div class="container">
+                    <div class="col-12 sec1">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est cumque consectetur deserunt voluptatum facere, aut possimus, saepe hic exercitationem repellendus itaque dolorum reprehenderit neque sint ab impedit amet blanditiis a laboriosam et necessitatibus
+                            quae quidem error. Necessitatibus architecto in libero aut. Odit sint architecto repudiandae tenetur? Autem ipsam porro ex sunt voluptatum totam numquam architecto aperiam possimus, illo inventore consequuntur, hic reiciendis.
+                            Laboriosam reprehenderit tempore fugiat, esse exercitationem consequuntur omnis. Quaerat cumque illo vel incidunt vitae iure sed, nesciunt fugiat velit quo, debitis nihil blanditiis cum quis! Ipsa voluptates numquam reprehenderit
+                            quae vitae laborum dicta possimus quo earum iure, perferendis soluta! Ut quo fugit doloribus sit illum voluptatibus modi qui eligendi molestias id. Quaerat a magni amet, nesciunt impedit aliquid adipisci blanditiis officiis
+                            commodi quae non rerum autem ab esse pariatur, inventore ad expedita! Sequi vel minus perspiciatis illo provident, ipsa qui alias excepturi ratione consequatur enim ex veniam eum nemo, similique fugiat tempore quia architecto
+                            sapiente nihil! Earum corrupti dolor est libero vitae, illo inventore, optio, alias ratione praesentium tempora ad eum fugiat quidem exercitationem numquam? Aliquid reiciendis quidem, rem eaque quibusdam minima modi odio placeat,
+                            facilis amet itaque nobis asperiores! Quo ex, perferendis assumenda sapiente molestias amet id.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="footer-copyright">© 2020 Copyright:</div>
-        </footer>
+        </div>
+        <div class="sec2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="140" height="140">
+                        <h2>Heading</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dicta quasi facere maiores quas et, minima excepturi optio rerum corporis.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="140" height="140">
+                        <h2>Heading</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio magni temporibus vitae ex in nam amet animi quam perspiciatis suscipit!</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="140" height="140">
+                        <h2>Heading</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt fuga et esse corporis, nesciunt omnis quis explicabo unde a rerum?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sec3">
+            <div class="container">
+                <div class="row">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="sec4">
+            <div class="container">
+                <div class="row">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="sec5">
+            <div class="container">
+                <div class="row">
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 column" id="left-column">
+                    <h2 class="mt-2">Lorem Ipsum Dolor</h2>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium incidunt asperiores, aspernatur ab eligendi cumque nihil beatae consectetur dolorum consequatur id natus molestiae quo eius voluptas odit sequi, aliquid cum?
+                </div>
+                <div class="col-md-6 column " id="right-column">
+                    <h2 class="mt-2">Lorem Ipsum Dolor</h2>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iste quisquam ab odit at. Ad impedit quam ut totam nobis, vitae magni, ipsum labore error voluptatibus odio itaque illum similique!
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer">
+        <div class="copy">© <span class="current-year">2020</span>
+            <span> - Desenvolvido por <a href="mailto:lucastadra16@gmail.com" style="text-decoration: none; color: #ccccccee">Lucas Tadra Mainginski</a></span>
+        </div>
     </div>
 
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js " integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js " integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6 " crossorigin="anonymous "></script>
 </body>
-
-<script>
-    currentSlide(1);
-
-    //Script para abrir e fechar o sidenav com o mesmo botão
-    function toggle_nav() {
-        if (document.getElementById("side-nav").style.display === "none") {
-            document.getElementById("side-nav").style.display = "block";
-        } else {
-            document.getElementById("side-nav").style.display = "none";
-        }
-    }
-
-    //Script da animação do accordion
-    var acc = document.getElementsByClassName("accordion");
-    var i;
-
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
-        });
-    }
-
-    //Script do header fixo
-
-    window.onscroll = function() {
-        myFunction()
-    };
-
-    var header = document.getElementById("myHeader");
-    var sticky = header.offsetTop;
-
-    function myFunction() {
-        if (window.pageYOffset > sticky) {} else {
-            header.classList.add("sticky");
-            header.classList.remove("sticky");
-        }
-    }
-
-    //Script do slider de conteúdo
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += "";
-    }
-</script>
 
 </html>

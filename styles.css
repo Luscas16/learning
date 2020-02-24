@@ -1,406 +1,137 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 html,
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', Arial, sans-serif;
-    font-size: 22px;
-    height: 100%;
-    width: 100%;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 0.5fr 3.5fr;
-    grid-template-rows: 10vh 100vh 40vh;
-    grid-template-areas: "h h" "m m" "f f";
-}
-
-
-/*Estilização do header*/
-
-header {
-    background: #efefefee;
-    display: flex;
-    color: #18818d;
-    grid-area: h;
-    height: 100%;
-    box-shadow: 0px 5px 5px #27272780;
-    -webkit-box-shadow: 0px 2px 5px #27272780;
-    -moz-box-shadow: 0px 5px 5px #27272780;
-    z-index: 4;
-}
-
-header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    color: #18818d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-header li {
-    display: inline-block;
-    color: #18818d;
-}
-
-header li a {
-    display: block;
-    padding: 25px;
-    margin: auto;
-    text-align: center;
-    color: #18818d;
+    max-width: 100%;
+    overflow-x: hidden;
     text-decoration: none;
-    overflow: hidden;
+    scroll-behavior: smooth;
+    margin-top: 37px;
 }
 
-.landpage-header:hover {
-    background-color: lightgray;
-    color: #18818d;
-    transition: 0.4s;
+.navbar-custom {
+    background-color: rgb(251, 251, 251);
+    font-size: 19px;
+    font-weight: 600;
 }
 
-#btn-toggleNav {
-    margin: 10px;
-    outline-style: none;
-    font-size: 32px;
-    color: #18818d;
-    border: none;
-    float: right;
-    overflow: hidden;
-    flex: 1;
-    justify-content: flex-end;
-    background-color: inherit;
-    cursor: pointer;
-}
-
-#btn-toggleNav:active {
-    color: #808080;
-    overflow: hidden;
+@media (max-width: 991px) {
+    .navbar-custom .navbar-brand {
+        margin-top: 9px;
+        margin-left: 18px;
+    }
+    .navbar-custom .navbar-nav {
+        margin-top: 25px;
+    }
 }
 
 
-/*Estilização do side-nav*/
+/* Customizes NavBar/Header */
 
-aside {
-    grid-area: m;
-    box-shadow: 0 15px 0 0 grey;
-    z-index: 5;
+.navbar-custom .navbar-nav .nav-link {
+    color: #00695c;
 }
 
-.accordion {
-    padding: 25px 25px 25px 15px;
-    width: 100%;
-    background-color: #efefefee;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    color: #18818d;
-    transition: 0.2s;
-    text-align: left;
+.navbar-custom .navbar-nav .nav-link:visited {
+    color: #00695c;
 }
 
-.active,
-.accordion:hover {
-    background-color: lightgray;
+.navbar-custom .nav-link:hover {
+    transition-duration: 0.6s;
+    background-color: rgb(231, 231, 231);
 }
 
-.accordion:active {
-    background-color: lightgray;
-}
-
-
-/*Estilização da lista**/
-
-.list {
-    padding: 0px;
-    margin: 0px;
-    list-style-type: none;
-    width: inherit;
-    /* herda o tamanho do accordion que a contém */
-}
-
-.list a {
-    display: block;
-    padding: 5px;
-    background-color: #efefefee;
-    list-style-type: none;
-    text-decoration: none;
-    text-align: center;
-    transition: 0.4s;
-    /*color: rgb(99, 105, 105);*/
-    color: #808080;
-}
-
-.landpage:hover {
-    background-color: lightgray;
-    color: #18818d;
-}
-
-li a:active {
-    color: lightgray;
-}
-
-.panel {
-    padding: 0;
-    background-color: lightgray;
-    color: #808080;
-    max-height: 0;
-    overflow: hidden;
-    /* "esconde" o conteudo inicialmente */
-    transition: max-height 0.2s ease-out;
-    /* Transição */
-}
-
-.accordion:after {
-    /* Adiciona o ícone \/ após fechar */
-    font-family: "Font Awesome 5 Free";
-    content: "\f078";
-    font-weight: bold;
-    float: right;
-}
-
-.active:after {
-    /* Adiciona o ícone /\ após abrir */
-    font-family: "Font Awesome 5 Free";
-    content: "\f077";
-    font-weight: bold;
-    float: right;
-}
-
-
-/*Estilização do content*/
-
-.content {
+.navbar-custom .nav-link {
     padding: 15px;
-    grid-area: m;
-    background-color: white;
-    height: 100%;
-    color: #808080;
+    margin: auto 15px;
 }
 
 
-/*Estilização do slider de conteúdo*/
+/* Customizes hamburguer icon */
 
-.slideshow-container {
-    max-width: 900px;
-    max-height: 800px;
-    position: relative;
-    margin: auto;
-    margin-top: 30px;
+.fa-bars {
+    font-weight: 900;
+    color: #00695c;
+    border-style: none;
 }
 
-
-/* Hide the images by default */
-
-.mySlides {
-    display: none;
+.navbar-toggler:active span {
+    color: rgb(187, 187, 187);
 }
 
-
-/* Next & previous buttons */
-
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+.navbar-toggler:focus span {
+    color: rgb(187, 187, 187);
 }
 
-
-/* Position the "next button" to the right */
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+.fa-bars:active {
+    font-weight: 900;
+    color: rgb(187, 187, 187);
+    border-style: none;
 }
 
-
-/* On hover, add a black background color with a little bit see-through */
-
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-/* Caption text */
-
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-
-/* Number text (1/3 etc) */
-
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-
-/* The dots/bullets/indicators */
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.dot:hover {
-    background-color: #717171;
-}
-
-
-/* Fading animation */
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
-}
-
-
-/* Estilização dos Inputs */
-
-.input-container {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    color: #808080;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-.input-container fieldset {
+.navbar-toggler {
     border: none;
 }
 
-.input-container fieldset legend {
+
+/* Customizes main content */
+
+.content-container {
+    font-size: 16.5px;
+}
+
+.sec1 {
+    padding: 10px;
+}
+
+.sec2 {
+    margin: 20px;
     text-align: center;
-    font-size: 20px;
 }
 
-.input-container input[type="text"],
-input[type="password"],
-input[type="email"] {
-    width: 100%;
-    display: block;
-    margin-bottom: 5px;
-    border: 1px solid #808080;
-    border-radius: 3px;
-}
-
-#btnRegister {
-    width: 100%;
-    margin-top: 8px;
-    padding: 2px;
-    color: #808080;
-    border-radius: 4px;
-    border: none;
-    font-size: auto;
-    cursor: pointer;
-}
-
-#btnRegister:active {
-    opacity: 0.6;
-    cursor: pointer;
+.sec2 img {
+    margin: 30px 0px;
 }
 
 
-/*Estilização do footer*/
+/* Customizes footer */
 
 footer {
-    background-color: #18818d;
-    color: #efefefee;
-    text-align: center;
-    height: 350px;
-    grid-area: f;
-    display: flex;
-    bottom: 0;
-}
-
-footer .footer-content {
-    height: 80%;
-    display: flex;
-    background-color: #18818d;
-    font-size: 16px;
-    justify-content: center;
-    align-content: center;
-}
-
-footer .footer-copyright {
-    height: 20%;
-    display: flex;
-    margin-bottom: 0;
-    background-color: #146770;
-    justify-content: center;
-    align-content: center;
-    padding: 25px;
-    bottom: 0;
+    background-color: #00897b;
+    color: #fff;
+    padding: 20px;
     width: 100%;
-    align-self: bottom;
+    margin-top: 50px;
 }
 
-footer .left-column {
-    width: 35%;
-    height: 100%;
-    float: left;
-    margin: 10px 40px;
-    text-align: justify;
-    max-height: 200px;
+footer .column {
+    padding-bottom: 40px;
+    height: auto;
+    overflow-y: none;
 }
 
-footer .right-column {
-    width: 35%;
-    height: 100%;
+footer h2 {
+    overflow: none;
+}
+
+.copy {
+    width: 100%;
     float: right;
-    margin: 10px 40px;
-    text-align: justify;
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 21px;
+    margin-right: 25px;
+}
+
+.footer {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    align-content: center;
+    background-color: #00695c;
 }
