@@ -10,7 +10,11 @@ body {
     overflow-x: hidden;
     text-decoration: none;
     scroll-behavior: smooth;
-    margin-top: 37px;
+    height: 100%;
+}
+
+body {
+    position: relative;
 }
 
 .navbar-custom {
@@ -27,11 +31,6 @@ body {
     }
     .navbar-custom .navbar-nav {
         margin-top: 25px;
-    }
-    .navbar {
-        max-height: 60px;
-        justify-content: center;
-        align-content: center;
     }
 }
 
@@ -95,17 +94,59 @@ body {
     font-size: 16.5px;
 }
 
-.sec1 {
-    padding: 10px;
+.carousel-item {
+    height: 600px;
+    width: 100%;
+}
+
+.carousel-item img {
+    height: 600px;
+    width: 100%;
 }
 
 .sec2 {
-    margin: 20px;
+    margin: 40px;
     text-align: center;
 }
 
 .sec2 img {
     margin: 30px 0px;
+}
+
+.sec3 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-size: 22px;
+    height: 500px;
+    color: white;
+    padding: 40px;
+}
+
+.sec3:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background: url('./img/htmlcss-bg.png') no-repeat center center /cover fixed;
+    content: '';
+    filter: grayscale(20%) blur(0.7px) brightness(0.35);
+    z-index: -1;
+}
+
+.sec3-content {
+    height: 200px;
+    font-size: auto;
+}
+
+@media (max-width:991px) {
+    .sec3 {
+        height: 1000px;
+    }
+    .sec3-content {
+        font-size: 20px;
+    }
 }
 
 
@@ -116,7 +157,6 @@ footer {
     color: #fff;
     padding: 20px;
     width: 100%;
-    margin-top: 50px;
 }
 
 footer .column {
