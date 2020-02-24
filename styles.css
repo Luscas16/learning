@@ -145,6 +145,11 @@ body {
 @media (max-width:991px) {
     .sec3 {
         height: 1100px;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+        word-wrap: break-word;
     }
     .sec3-content {
         font-size: 20px;
