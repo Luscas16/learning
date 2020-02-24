@@ -147,13 +147,15 @@ body {
     .sec3-content {
         font-size: 20px;
     }
+    .sec3:before {
+        background-attachment: scroll;
+    }
 }
 
 
 /* Customizes footer */
 
 footer {
-    position: absolute;
     background-color: #00897b;
     color: #fff;
     padding: 20px;
@@ -171,6 +173,7 @@ footer h2 {
 }
 
 .copy {
+    position: absolute;
     width: 100%;
     float: right;
     display: block;
